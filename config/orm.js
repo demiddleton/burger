@@ -35,11 +35,12 @@ function printQuestionMarks(num) {
 var orm = {
 
    //Create a method to selectAll
-    selectAll: function (tableName) {
-        var queryString = "SELECT * FROM ??";
+    selectAll: function (tableName, cb) {
+        var queryString = "SELECT * FROM ??; ";
         connection.query(queryString, [tableName], function (err, result) {
             if (err) throw err;
             console.log(result);
+            cb(result);
         });
     },
 
