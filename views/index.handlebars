@@ -11,14 +11,14 @@
 	 <div class="panel-panel default">
 	 	<h1>Ready to Eat Burger</h1>
 	 	<ul class="list-group">
-	 		{{#each burgers}}
+	 		{{#each burger}}
 	 		 {{#unless this.devoured}}
 	 		 <li class="list-group-item">
 	 		  <div class="input-group">
 	 		  	<p class="lead">{{this.burger_name}}</p>
 	 		  	<span class="input-group-btn">
 
-	 		  		<form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+	 		  		<form action="burger/update/{{this.id}}?_method=PUT" method="POST">
 	 		  			<input type="hidden" name="devoured" value="true">
 	 		  			<button class="btn btn-default btn-lg" type="submit">Devour it!</button>
 	 		  		</form>
@@ -38,7 +38,7 @@
 			<h1>Devoured Burgers</h1>
 			<div class="panel panel-default">
 				<ul class="list-group">
-					{{#each burgers}}
+					{{#each burger}}
 					 {{#if this.devoured}}
 					 <li class="list-group-item">
 					 	<p class="lead">{{this.burger_name}}</p>
@@ -53,7 +53,7 @@
 	<div class="col-md-10 col-md-offset-1">
 		<p class="lead">add burger & click submit</p>
 		
-		<form class="create-update-form" action="burgers/create" method="POST">
+		<form class="create-update-form" action="burger/create" method="POST">
 		 <div class="form-group">
 		 	<textarea class="form-control input-lg" type="text" name="burger_name" row="3"></textarea>
 		 </div>
