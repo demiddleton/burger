@@ -16,7 +16,7 @@ router.get("/", function (req, res) {
 });
   
 // Add new burger to the db.
-router.post("/api/burger", function (req, res) {
+router.post("/burger/create", function (req, res) {
     burger.insertOne(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(result) {
         // Send back the ID of the new burger
         res.json({ id: result.insertId });
