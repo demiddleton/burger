@@ -10,11 +10,7 @@
 					<label for="newburger">Create your own burger here</label>
 					{{!-- <input type="text" id="newburger" name="burger"> --}}
 					<select data-placeholder="" id="newburger" name="burger">
-						<option value="Nothing Selected" selected>Please Select a Sandwich</option>
-						<option value="Plain Hamburger">Hamburger</option>
-						<option value="Pimento Cheese Hamburger"> Pimento CheeseBurger</option>
-						<option value="Jalapeno Hamburger">Jalapeno Burger</option>
-						
+						<option value="Nothing Selected" selected>Type Here</option>										
 					</select>
 
 					<button type="submit" class="btn btn-success" id="addburger">
@@ -27,11 +23,8 @@
 	<div class="row">
 		<div class="col-sm-6">
 			<div class="panel panel-default">
-				<div class="panel-heading" id="leftside"><strong>Order Your Burger</strong>
-					<p>Send order to cashier when ready for pick up</p>
-				</div>
+				<div class="panel-heading" id="leftside"><strong>Menu</strong> </div>
 				<div class="panel-body">
-
 					<ul>
 						{{#each burger}}
 						{{#unless devoured}}
@@ -49,9 +42,7 @@
 		</div>
 		<div class="col-sm-6">
 			<div class="panel panel-default">
-				<div class="panel-heading" id="rightside"><strong>Burger is Ready for Pick Up</strong>
-					<p>Remove order from pick up when delivered</p>
-				</div>
+				<div class="panel-heading" id="rightside"><strong>Devoured</strong></div>
 				<div class="panel-body">
 					<ul>
 						{{#each burger}}
