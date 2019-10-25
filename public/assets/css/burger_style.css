@@ -1,20 +1,23 @@
-  
-body{
-	background-color: grey;
-	text-align: center;
-	height: 100%;
-    background-image: url(public\assets\img\burger.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    color: rgb(226, 222, 222);
-    background-blend-mode: luminosity;
+.jumbotron {
+  background-image: url("../img/burgerpic2.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #000000;
+  color: #ffffff;
+  margin-top: 3%;
 }
-
-.jumbotron{
-	background-color: grey;
-	
+#newburger {
+  color: #5c5c5c;
 }
-
-h1{
-	font-size: 18px;
+#leftside {
+  background-color: #5c5c5c;
+  color: white;
+  text-align: center;
+  font-size: 1.3em;
+}
+#rightside {
+  background-color: #e49322;
+  color: white;
+  text-align: center;
+  font-size: 1.3em;
 }
