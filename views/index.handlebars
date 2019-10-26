@@ -4,8 +4,9 @@
 		<h1 class="display-4">Welcome to the Burger Bar</h1>
 		<hr class="my-4">
 		{{!-- <Insert image here> --}}
-			
-		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6xUGHqInqJeVQYPEN4yYB3XaNSesUrOrZVYQDwTGHyMKXUfmz&s" class="rounded mx-auto d-block">
+
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6xUGHqInqJeVQYPEN4yYB3XaNSesUrOrZVYQDwTGHyMKXUfmz&s"
+			class="rounded mx-auto d-block">
 		<h2>Would you like to add a burger to the menu?</h2>
 		<panel>
 			<form class="create-form">
@@ -15,7 +16,7 @@
 					{{!-- <input type="text" id="newburger" name="burger"> --}}
 					<input type="text" class="form-control" id="newburger" name="burger" placeholder="Type Here">
 					<button type="submit" class="btn btn-primary" id="addburger">Submit</button>
-					
+
 				</div>
 			</form>
 		</panel>
@@ -32,6 +33,7 @@
 						<span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
 						<button type="button" class="eatburger btn btn-primary" id="eatbutton" data-id="{{this.id}}"
 							data-newDevoured="{{devour}}">Devour</button>
+
 						<hr>
 						{{/unless}}
 						{{/each}}
