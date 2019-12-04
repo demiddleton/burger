@@ -13,15 +13,11 @@ router.get("/", function(req, res) {
   });
 
   router.post("/api/burger", function(req, res) {
-    burger.insertOne(
-      ["burger_name", "devoured"],
-      [req.body.burger_name, req.body.devoured],
-      function(data) {
-        // Send back the ID of new burger
-        res.json({ id: result.insertId });
-      }
-    );
+    burger.insert([req.body.name], function(result) {
+      res.json({ id: result.insertId });
+    });
   });
+  
   router.put("/api/burger/:id", function(req, res) {
     var condition = "id = " + req.params.id;
 
