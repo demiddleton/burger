@@ -11,7 +11,7 @@ if (process.env.JAWSDB_URL) {
     port: '3306',
     database: 'uk0o53lj4j3dqabg'
   });
-// };
+ };
 
 
 // var connection = mysql.createConnection({
